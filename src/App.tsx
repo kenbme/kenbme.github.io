@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
+import Repo from './components/repos/RepoInterface';
+import User from './components/profile/UserInterface';
+import Profile from './components/profile/Profile';
+import Repos from './components/repos/Repos';
+import Links from './components/links/Links';
 
-function App() {
+export default function App() {
+  const [user, setUser] = useState<User | undefined>(undefined);
+  const [repos, setRepos] = useState<Repo[] | undefined>(undefined);
+  useEffect(() => {
+    if (user === undefined) {
+      fetch("https://api.github.com/users/kenbme")
+        .then(response => response.json())
+        .then(json => setUser(json));
+    }
+    if (repos === undefined) {
+      fetch("https://api.github.com/users/kenbme/repos")
+        .then(response => response.json())
+        .then(json => setRepos(json));
+    }
+  });
+  if (user === undefined || repos === undefined) {
+    return (
+      <></>
+    );
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Profile user={user} />
+      <Repos repos={repos} />
+      <Links />
+    </>
   );
 }
-
-export default App;
