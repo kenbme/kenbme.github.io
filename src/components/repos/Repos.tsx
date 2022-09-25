@@ -21,7 +21,7 @@ export default function Repos({ repos }: Props) {
             {repos.map(repo =>
                 <li className="repo" key={repo.id}>
                     <div className="repo-header">
-                        <img src={getLanguageLogo(repo.language)} alt="language-logo" />
+                        <img src={getLanguageLogo(repo.language)} title={repo.language} alt={repo.language + " Logo"} />
                         <a href={repo.svn_url}><h3>{repo.name}</h3></a>
                     </div>
                     <p>{repo.description}</p>
