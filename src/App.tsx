@@ -13,7 +13,7 @@ export default function App() {
     if (user === undefined) {
       fetch("https://api.github.com/users/kenbme")
         .then(response => response.json())
-        .then(json => setUser(json));
+        .then(json => setUser(json))
     }
     if (repos === undefined) {
       fetch("https://api.github.com/users/kenbme/repos")
