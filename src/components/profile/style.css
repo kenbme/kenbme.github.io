@@ -1,0 +1,15 @@
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    border: 10px solid #bdbdbd;
+    border-radius: 50%;
+    max-width: 500px;
+}
+
+.profile h2,
+.profile p {
+    text-align: center;
+    color: #2e2c2d;
+}
