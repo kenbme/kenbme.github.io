@@ -8,6 +8,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <App github_username="kenbme" linkedin_username="kenned-barbosa-1b148a244" />
   </React.StrictMode>
 );

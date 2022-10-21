@@ -6,14 +6,14 @@ import Profile from './components/profile/Profile';
 import Repos from './components/repos/Repos';
 import Links from './components/links/Links';
 
-export default function App() {
+export default function App({ github_username, linkedin_username }: Props) {
   const [user, setUser] = useState<User | undefined>(undefined);
   const [repos, setRepos] = useState<Repo[] | undefined>(undefined);
   useEffect(() => {
-    fetch("https://api.github.com/users/kenbme")
+    fetch(`https://api.github.com/users/${github_username}`)
       .then(response => response.json())
       .then(json => setUser(json))
-    fetch("https://api.github.com/users/kenbme/repos")
+    fetch(`https://api.github.com/users/${github_username}/repos`)
       .then(response => response.json())
       .then(json => setRepos(json));
   }, []);
@@ -26,7 +26,12 @@ export default function App() {
     <>
       <Profile user={user} />
       <Repos repos={repos} />
-      <Links />
+      <Links github_username={github_username} linkedin_username={linkedin_username} />
     </>
   );
+}
+
+interface Props {
+  github_username: String,
+  linkedin_username: String
 }
