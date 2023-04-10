@@ -1,9 +1,13 @@
 .links ul {
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+    justify-content: center;
 }
 
 .links li {
-    max-width: 128px;
+    margin: 0px 5px;
+    max-width: 64px;
+}
+
+.links li img {
+    filter: opacity(0.6) drop-shadow(0 0 0 black);
 }

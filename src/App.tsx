@@ -25,8 +25,8 @@ export default function App({ github_username, linkedin_username }: Props) {
   return (
     <>
       <Profile user={user} />
-      <Repos repos={repos} />
       <Links github_username={github_username} linkedin_username={linkedin_username} />
+      <Repos repos={repos} />
     </>
   );
 }
