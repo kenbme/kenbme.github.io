@@ -20,8 +20,8 @@
 .repo-header {
     display: flex;
     align-items: center;
-    padding: 10px 0px;
     border-bottom: 2px solid #2e2c2d;
+    padding-bottom: 8px;
 }
 
 .repo-header img {
@@ -30,5 +30,5 @@
 }
 
 .repo-body {
-    padding: 8px 0px 0px 0px;
+    padding-top: 8px;
 }
