@@ -3,7 +3,7 @@
 }
 
 .profile img {
-    border: 10px solid #bdbdbd;
+    border: 10px solid #2e2c2d;
     border-radius: 50%;
     max-width: 500px;
 }
@@ -12,4 +12,15 @@
 .profile p {
     text-align: center;
     color: #2e2c2d;
+}
+
+@media (prefers-color-scheme: dark) {
+    .profile h2,
+    .profile p {
+        color: #fbfbfb;
+    }
+
+    .profile img {
+        border-color: #fbfbfb;
+    }
 }

@@ -52,3 +52,9 @@ section h1 {
 section {
     padding: 8px;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #151515;
+    }
+}

@@ -32,3 +32,19 @@
 .repo-body {
     padding-top: 8px;
 }
+
+@media (prefers-color-scheme: dark) {
+    .repo {
+        background-color: #2e2c2d;
+        color: #fbfbfb;
+    }
+
+    .repo:hover {
+        outline: 4px solid #fbfbfb;
+    }
+
+    .repo-header {
+        border-bottom: 2px solid #fbfbfb;
+    }
+    
+}
