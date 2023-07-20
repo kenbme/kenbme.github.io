@@ -9,7 +9,7 @@ export default function Links({ github_username, linkedin_username }: Props) {
             <ul>
                 <li>
                     <a href={github_url} title="GitHub">
-                        <img src={require("./img/github.png")} alt="GitHub" />
+                        <img src={require("./img/github.png")} alt="GitHub" id="github"/>
                     </a>
                 </li>
                 <li>

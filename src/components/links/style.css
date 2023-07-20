@@ -8,6 +8,8 @@
     max-width: 64px;
 }
 
-.links li img {
-    filter: opacity(0.6) drop-shadow(0 0 0 black);
+@media (prefers-color-scheme: dark) {
+    .links li #github {
+        filter: invert(1) drop-shadow(0 0 0 black);
+    }
 }
